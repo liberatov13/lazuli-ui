@@ -13,11 +13,30 @@ export class MenuBarComponent implements OnInit {
   ngOnInit(): void {
     this.menus = [
       {
-        label: "Produto",
+        label: "Produtos",
         icon: "fa fa-cookie-bite",
         items: [
-          {label: "Cadastrar", routerLink: 'produto/cadastrar'},
-          {label: "Lista", routerLink: 'produto/listar'},
+          {
+            label: "Produto",
+            items: [
+              {label: "Cadastro", routerLink: 'produto/cadastrar'},
+              {label: "Lista", routerLink: 'produto'},
+            ]
+          },
+          {
+            label: "Receita",
+            items: [
+              {label: "Cadastro", routerLink: 'receita/cadastrar'},
+              {label: "Lista", routerLink: 'receita'},
+            ]
+          },
+          {
+            label: "Tipo de Produto",
+            items: [
+              {label: "Cadastro", routerLink: 'tipo-produto/cadastrar'},
+              {label: "Lista", routerLink: 'tipo-produto'},
+            ]
+          }
         ]
       },
       {
