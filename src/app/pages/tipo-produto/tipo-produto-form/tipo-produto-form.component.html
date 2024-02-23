@@ -1,0 +1,19 @@
+<div>
+	<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="formgrid">
+		<div class="col-6">
+			<label for="descricao">
+				Descrição
+			</label>
+			<div class="p-inputgroup">
+				<input pInputText [(ngModel)]="tipoProduto.descricao" name="descricao" id="descricao"
+					   required [minlength]="2" />
+			</div>
+		</div>
+
+		<div class="col-2">
+			<button pButton type="submit" class="btn" [label]="'Salvar'"
+					[icon]="'fa-solid fa-floppy-disk'"
+					[disabled]="form.invalid" ></button>
+		</div>
+	</form>
+</div>

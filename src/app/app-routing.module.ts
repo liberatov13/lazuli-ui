@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TipoProdutoFormComponent } from "./pages/tipo-produto/tipo-produto-form/tipo-produto-form.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'tipo-produto/cadastrar',
+    component: TipoProdutoFormComponent,
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
