@@ -34,7 +34,7 @@ export class TipoProdutoPageComponent {
     this.messageService.add({
       severity: 'success',
       summary: 'Sucesso!',
-      detail: `Tipo de produto ${idTipoProduto} excluído com sucesso`
+      detail: `Tipo de produto de código ${idTipoProduto} excluído com sucesso`
     });
   }
 
