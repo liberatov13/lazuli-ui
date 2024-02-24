@@ -1,5 +1,6 @@
 <div>
-	<button pButton [label]="'Cadastrar'" [icon]="'fa-plus'" class="p-button mb-4" (click)="openTipoProdutoForm()"></button>
+	<p-messages [value]="messages"></p-messages>
 
-	<app-tipo-produto-list></app-tipo-produto-list>
+	<button pButton [label]="'Cadastrar'" [icon]="'fa-plus'" class="p-button mb-4" (click)="openTipoProdutoForm()"></button>
+	<app-tipo-produto-list (onTipoProdutoDeleted)="onTipoDeleted($event)" (onError)="errorMessageListProduto($event)"></app-tipo-produto-list>
 </div>

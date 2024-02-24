@@ -11,6 +11,8 @@ import { TableModule } from "primeng/table";
 import { TipoProdutoPageComponent } from './tipo-produto-page/tipo-produto-page.component';
 import { DynamicDialogModule } from "primeng/dynamicdialog";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TooltipModule } from "primeng/tooltip";
+import { ConfirmDialogModule } from "primeng/confirmdialog";
 
 
 @NgModule({
@@ -24,11 +26,13 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     BrowserModule,
     ButtonModule,
     CommonModule,
+    ConfirmDialogModule,
     DynamicDialogModule,
     FormsModule,
     InputTextModule,
     MessagesModule,
     TableModule,
+    TooltipModule,
   ]
 })
 export class TipoProdutoModule { }

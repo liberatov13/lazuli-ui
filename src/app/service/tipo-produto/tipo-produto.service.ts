@@ -21,4 +21,8 @@ export class TipoProdutoService {
   save(tipoProduto: TipoProduto): Observable<TipoProduto> {
     return this.http.post<TipoProduto>(this.endpoint, tipoProduto);
   }
+
+  delete(idTipoProduto: number): Observable<any> {
+    return this.http.delete(`${this.endpoint}/${idTipoProduto}`);
+  }
 }

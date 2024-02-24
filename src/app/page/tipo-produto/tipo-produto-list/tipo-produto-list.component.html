@@ -1,5 +1,6 @@
 <div>
 	<p-messages [(value)]="messages"></p-messages>
+	<p-confirmDialog></p-confirmDialog>
 
 	<p-table [value]="tiposProduto" styleClass="p-datatable-gridlines" [loading]="isLoading" [resizableColumns]="true">
 		<ng-template pTemplate="header">
@@ -12,12 +13,18 @@
 					Descrição
 					<p-sortIcon field="descricao"></p-sortIcon>
 				</th>
+				<th class="col-1"></th>
 			</tr>
 		</ng-template>
 		<ng-template pTemplate="body" let-tipo>
 			<tr>
 				<td>{{ tipo.idTipoProduto }}</td>
 				<td>{{ tipo.descricao }}</td>
+				<td>
+					<p-button [icon]="'fa-solid fa-trash-can'" severity="danger"
+							[pTooltip]="'Excluir'" tooltipPosition="bottom"
+							[rounded]="true" (onClick)="delete(tipo.idTipoProduto)"></p-button>
+				</td>
 			</tr>
 		</ng-template>
 	</p-table>
