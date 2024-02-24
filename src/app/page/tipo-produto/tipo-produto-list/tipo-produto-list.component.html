@@ -1,11 +1,17 @@
 <div>
 	<p-messages [(value)]="messages"></p-messages>
 
-	<p-table [value]="tiposProduto" [loading]="isLoading">
+	<p-table [value]="tiposProduto" styleClass="p-datatable-gridlines" [loading]="isLoading" [resizableColumns]="true">
 		<ng-template pTemplate="header">
 			<tr>
-				<th>#</th>
-				<th>Descrição</th>
+				<th pResizableColumn [pSortableColumn]="'idTipoProduto'">
+					#
+					<p-sortIcon field="idTipoProduto"></p-sortIcon>
+				</th>
+				<th pResizableColumn [pSortableColumn]="'descricao'">
+					Descrição
+					<p-sortIcon field="descricao"></p-sortIcon>
+				</th>
 			</tr>
 		</ng-template>
 		<ng-template pTemplate="body" let-tipo>
