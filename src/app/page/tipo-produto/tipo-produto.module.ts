@@ -5,6 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { InputTextModule } from "primeng/inputtext";
 import { ButtonModule } from "primeng/button";
+import { MessagesModule } from "primeng/messages";
 
 
 
@@ -18,6 +19,7 @@ import { ButtonModule } from "primeng/button";
     CommonModule,
     FormsModule,
     InputTextModule,
+    MessagesModule,
   ]
 })
 export class TipoProdutoModule { }

@@ -1,12 +1,16 @@
 <div>
+	<p-messages [(value)]="messages"></p-messages>
+
 	<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="formgrid">
 		<div class="col-6">
 			<label for="descricao">
 				Descrição
 			</label>
 			<div class="p-inputgroup">
-				<input pInputText [(ngModel)]="tipoProduto.descricao" name="descricao" id="descricao"
-					   required [minlength]="2" />
+				<input pInputText [ngModel]="tipoProduto.descricao | uppercase" (ngModelChange)="tipoProduto.descricao=$event.toUpperCase()"
+						name="descricao" id="descricao"
+						autocomplete="off"
+						required [minlength]="2" />
 			</div>
 		</div>
 
