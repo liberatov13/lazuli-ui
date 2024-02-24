@@ -1,7 +1,7 @@
 <div>
 	<p-messages [(value)]="messages"></p-messages>
 
-	<p-table [value]="tiposProduto">
+	<p-table [value]="tiposProduto" [loading]="isLoading">
 		<ng-template pTemplate="header">
 			<tr>
 				<th>#</th>

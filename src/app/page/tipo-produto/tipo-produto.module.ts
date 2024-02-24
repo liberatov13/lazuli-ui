@@ -8,18 +8,23 @@ import { ButtonModule } from "primeng/button";
 import { MessagesModule } from "primeng/messages";
 import { TipoProdutoListComponent } from './tipo-produto-list/tipo-produto-list.component';
 import { TableModule } from "primeng/table";
-
+import { TipoProdutoPageComponent } from './tipo-produto-page/tipo-produto-page.component';
+import { DynamicDialogModule } from "primeng/dynamicdialog";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 @NgModule({
   declarations: [
     TipoProdutoFormComponent,
-    TipoProdutoListComponent
+    TipoProdutoListComponent,
+    TipoProdutoPageComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     ButtonModule,
     CommonModule,
+    DynamicDialogModule,
     FormsModule,
     InputTextModule,
     MessagesModule,

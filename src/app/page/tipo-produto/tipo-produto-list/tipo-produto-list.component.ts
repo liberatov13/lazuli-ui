@@ -14,20 +14,29 @@ export class TipoProdutoListComponent implements OnInit {
   tiposProduto: TipoProduto[] = [];
 
   messages: Message[] = new Array<Message>();
+  isLoading: boolean = false;
 
   constructor(private tipoProdutoService: TipoProdutoService, private messageService: MessageService) {
   }
 
   ngOnInit(): void {
-        this.tipoProdutoService.findAll().subscribe({
-          next: (response: TipoProduto[]) => {
-            this.tiposProduto = response;
-          },
-          error: (error) => {
-            console.error(error);
-            this.messageService.add({severity: 'error', summary: 'Ops!', detail: 'Ocorreu um erro ao consultar os tipos de produto'})
-          }
+    this.isLoading = true;
+
+    this.tipoProdutoService.findAll().subscribe({
+      next: (response: TipoProduto[]) => {
+        this.tiposProduto = response;
+        this.isLoading = false;
+      },
+      error: (error) => {
+        console.error(error);
+        this.isLoading = false;
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Ops!',
+          detail: 'Ocorreu um erro ao consultar os tipos de produto'
         })
-    }
+      }
+    })
+  }
 
 }

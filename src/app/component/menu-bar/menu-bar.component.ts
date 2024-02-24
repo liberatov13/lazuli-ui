@@ -30,13 +30,7 @@ export class MenuBarComponent implements OnInit {
               {label: "Lista", routerLink: 'receita'},
             ]
           },
-          {
-            label: "Tipo de Produto",
-            items: [
-              {label: "Cadastro", routerLink: 'tipo-produto/cadastrar'},
-              {label: "Lista", routerLink: 'tipo-produto'},
-            ]
-          }
+          {label: "Tipo de Produto", routerLink: 'tipo-produto'},
         ]
       },
       {
