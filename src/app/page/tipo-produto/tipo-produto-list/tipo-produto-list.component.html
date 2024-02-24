@@ -1,0 +1,18 @@
+<div>
+	<p-messages [(value)]="messages"></p-messages>
+
+	<p-table [value]="tiposProduto">
+		<ng-template pTemplate="header">
+			<tr>
+				<th>#</th>
+				<th>Descrição</th>
+			</tr>
+		</ng-template>
+		<ng-template pTemplate="body" let-tipo>
+			<tr>
+				<td>{{ tipo.idTipoProduto }}</td>
+				<td>{{ tipo.descricao }}</td>
+			</tr>
+		</ng-template>
+	</p-table>
+</div>

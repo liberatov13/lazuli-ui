@@ -6,12 +6,15 @@ import { BrowserModule } from "@angular/platform-browser";
 import { InputTextModule } from "primeng/inputtext";
 import { ButtonModule } from "primeng/button";
 import { MessagesModule } from "primeng/messages";
+import { TipoProdutoListComponent } from './tipo-produto-list/tipo-produto-list.component';
+import { TableModule } from "primeng/table";
 
 
 
 @NgModule({
   declarations: [
-    TipoProdutoFormComponent
+    TipoProdutoFormComponent,
+    TipoProdutoListComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +23,7 @@ import { MessagesModule } from "primeng/messages";
     FormsModule,
     InputTextModule,
     MessagesModule,
+    TableModule,
   ]
 })
 export class TipoProdutoModule { }
