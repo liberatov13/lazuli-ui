@@ -8,20 +8,30 @@ import { TableModule } from "primeng/table";
 import { MessagesModule } from "primeng/messages";
 import { TooltipModule } from "primeng/tooltip";
 import { ConfirmDialogModule } from "primeng/confirmdialog";
+import { ProdutoFormComponent } from './produto-form/produto-form.component';
+import { ToggleButtonModule } from "primeng/togglebutton";
+import { DropdownModule } from "primeng/dropdown";
+import { BlockUIModule } from "primeng/blockui";
+import { ProgressSpinnerModule } from "primeng/progressspinner";
 
 
 @NgModule({
   declarations: [
-    ProdutoListComponent
+    ProdutoListComponent,
+    ProdutoFormComponent
   ],
   imports: [
+    BlockUIModule,
+    ButtonModule,
     CommonModule,
     ConfirmDialogModule,
-    ButtonModule,
+    DropdownModule,
     FormsModule,
     InputTextModule,
     MessagesModule,
+    ProgressSpinnerModule,
     TableModule,
+    ToggleButtonModule,
     TooltipModule,
   ]
 })

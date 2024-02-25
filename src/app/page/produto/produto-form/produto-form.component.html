@@ -1,0 +1,59 @@
+<div>
+	<p-messages [(value)]="messages"></p-messages>
+	<p-blockUI [blocked]="isLoading">
+		<p-progressSpinner></p-progressSpinner>
+	</p-blockUI>
+
+	<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="formgrid grid">
+
+		<div class="field col-4">
+			<label for="descricaoBasica">
+				Descrição Básica
+			</label>
+			<div class="p-inputgroup">
+				<input pInputText [ngModel]="produto.descricaoBasica | uppercase" (ngModelChange)="produto.descricaoBasica=$event.toUpperCase()"
+					   name="descricaoBasica" id="descricaoBasica"
+					   autocomplete="off"
+					   required [minlength]="2" [maxlength]="75" />
+			</div>
+		</div>
+
+		<div class="field col-6">
+			<label for="descricaoCompleta">
+				Descrição Completa
+			</label>
+			<div class="p-inputgroup">
+				<input pInputText [ngModel]="produto.descricaoCompleta | uppercase" (ngModelChange)="produto.descricaoCompleta=$event.toUpperCase()"
+					   name="descricaoCompleta" id="descricaoCompleta"
+					   autocomplete="off"
+					   [minlength]="2" [maxlength]="100" />
+			</div>
+		</div>
+
+		<div class="field col-2">
+			<label for="status">Status</label>
+			<div class="p-inputgroup">
+				<p-toggleButton [(ngModel)]="produto.status" id="status" name="status"
+						[onIcon]="'fa-solid fa-check'" [offIcon]="'fa-solid fa-times'"
+						[disabled]="isLoading"
+						onLabel="Ativo" offLabel="Inativo">
+				</p-toggleButton>
+			</div>
+		</div>
+
+		<div class="field col-4">
+			<label for="tipoProduto">Tipo de Produto</label>
+			<p-dropdown [(ngModel)]="produto.tipoProduto" id="tipoProduto" name="tipoProduto"
+					class="ng-dirty" [disabled]="isLoading"
+					[placeholder]="'Selecione o tipo do produto'" [showClear]="true" [style]="{'width':'100%'}"
+					[options]="tiposProduto" [optionLabel]="'descricao'" [required]="true">
+			</p-dropdown>
+		</div>
+
+		<div class="col-12">
+			<button pButton type="submit" class="p-button p-button-success" [label]="'Salvar'"
+					[icon]="'fa-solid fa-floppy-disk'"
+					[disabled]="form.invalid" ></button>
+		</div>
+	</form>
+</div>
