@@ -7,6 +7,7 @@ import { MenuBarComponent } from './component/menu-bar/menu-bar.component';
 import { MenubarModule } from "primeng/menubar";
 import { TipoProdutoModule } from "./page/tipo-produto/tipo-produto.module";
 import { HttpClientModule } from "@angular/common/http";
+import { ProdutoModule } from "./page/produto/produto.module";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserModule,
     HttpClientModule,
     MenubarModule,
+    ProdutoModule,
     TipoProdutoModule
   ],
   providers: [],

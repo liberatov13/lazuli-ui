@@ -56,9 +56,9 @@ export class TipoProdutoListComponent implements OnInit {
           },
           error: (error) => {
             console.error(error);
-            this.onError.emit({message: 'Ocorreu um erro ao deletar o produto', error})
+            this.onError.emit({message: 'Ocorreu um erro ao deletar o tipo de produto', error})
           }
-      });
+        });
       }
     })
   }
