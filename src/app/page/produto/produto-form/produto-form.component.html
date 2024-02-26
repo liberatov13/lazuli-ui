@@ -44,7 +44,7 @@
 		<div class="field col-4">
 			<label for="tipoProduto">Tipo de Produto</label>
 			<p-dropdown [(ngModel)]="produto.tipoProduto" id="tipoProduto" name="tipoProduto"
-					class="ng-dirty" [disabled]="isLoading"
+					class="ng-dirty" [disabled]="isLoading" [appendTo]="'body'"
 					[placeholder]="'Selecione o tipo do produto'" [showClear]="true" [style]="{'width':'100%'}"
 					[options]="tiposProduto" [optionLabel]="'descricao'" [required]="true">
 			</p-dropdown>

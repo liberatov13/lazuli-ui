@@ -13,12 +13,15 @@ import { ToggleButtonModule } from "primeng/togglebutton";
 import { DropdownModule } from "primeng/dropdown";
 import { BlockUIModule } from "primeng/blockui";
 import { ProgressSpinnerModule } from "primeng/progressspinner";
+import { ProdutoPageComponent } from './produto-page/produto-page.component';
+import { DynamicDialogModule } from "primeng/dynamicdialog";
 
 
 @NgModule({
   declarations: [
     ProdutoListComponent,
-    ProdutoFormComponent
+    ProdutoFormComponent,
+    ProdutoPageComponent
   ],
   imports: [
     BlockUIModule,
@@ -26,6 +29,7 @@ import { ProgressSpinnerModule } from "primeng/progressspinner";
     CommonModule,
     ConfirmDialogModule,
     DropdownModule,
+    DynamicDialogModule,
     FormsModule,
     InputTextModule,
     MessagesModule,
