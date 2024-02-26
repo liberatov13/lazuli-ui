@@ -1,0 +1,64 @@
+<div>
+	<p-messages [value]="messages"></p-messages>
+	<p-confirmDialog></p-confirmDialog>
+
+	<p-table [value]="produtos" styleClass="p-datatable-gridlines" [loading]="isLoading"
+			[paginator]="true" [rows]="5" [rowsPerPageOptions]="[5,10,25,50]"
+			[showCurrentPageReport]="true" [currentPageReportTemplate]="'{first} - {last} / {totalRecords}'"
+			[resizableColumns]="true">
+		<ng-template pTemplate="header">
+			<tr>
+				<th pResizableColumn [pSortableColumn]="'idProduto'">
+					#
+					<p-sortIcon field="idProduto"></p-sortIcon>
+					<p-columnFilter [type]="'numeric'" [field]="'idProduto'" [display]="'menu'"></p-columnFilter>
+				</th>
+				<th pResizableColumn [pSortableColumn]="'descricaoBasica'">
+					Descrição Básica
+					<p-sortIcon field="descricaoBasica"></p-sortIcon>
+					<p-columnFilter type="text" field="descricaoBasica" [display]="'menu'"></p-columnFilter>
+				</th>
+				<th pResizableColumn>
+					Descrição Completa
+				</th>
+				<th pResizableColumn>
+					Status
+					<p-columnFilter [type]="'boolean'" [field]="'status'" [display]="'menu'"></p-columnFilter>
+				</th>
+				<th></th>
+			</tr>
+		</ng-template>
+		<ng-template pTemplate="body" let-produto>
+			<tr>
+				<td>
+					{{ produto.idProduto }}
+				</td>
+				<td>
+					{{ produto.descricaoBasica }}
+				</td>
+				<td>
+					{{ produto.descricaoCompleta }}
+				</td>
+				<td>
+					<div class="flex justify-content-center">
+						<i class="fa-solid" [ngClass]="{'fa-circle-check status-ativo': produto.status, 'fa-circle-xmark status-inativo': !produto.status}"></i>
+					</div>
+				</td>
+				<td>
+					<div class="flex justify-content-center">
+						<p-button *ngIf="produto.status" [severity]="'danger'"
+								pTooltip="Desativar" [tooltipPosition]="'bottom'"
+								[rounded]="true" [icon]="'fa-solid fa-circle-xmark'"
+								(click)="disable(produto.idProduto)">
+						</p-button>
+						<p-button *ngIf="!produto.status" [severity]="'success'"
+								  pTooltip="Desativar" [tooltipPosition]="'bottom'"
+								  [rounded]="true" [icon]="'fa-solid fa-circle-check'"
+								  (click)="activate(produto.idProduto)">
+						</p-button>
+					</div>
+				</td>
+			</tr>
+		</ng-template>
+	</p-table>
+</div>
