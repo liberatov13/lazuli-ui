@@ -40,7 +40,7 @@ export class ProdutoListComponent implements OnInit {
 
   disable(idProduto: number) {
     this.confirmationService.confirm({
-      header: 'Desativar',  message: 'Deseja realmente inativar o produto?',
+      header: 'Desativar',  message: 'Deseja realmente desativar o produto?',
       icon: 'fa-solid fa-triangle-exclamation', acceptLabel: 'Sim', rejectLabel: 'Não',
       accept: () => {
         this.produtoService.disable(idProduto).subscribe({
@@ -49,7 +49,7 @@ export class ProdutoListComponent implements OnInit {
           },
           error: (error) => {
             console.error(error);
-            this.messageService.add({severity: 'error', summary: 'Ops!', detail: 'Ocorreu um erro ao inativar o produto'});
+            this.messageService.add({severity: 'error', summary: 'Ops!', detail: 'Ocorreu um erro ao desativar o produto'});
           }
         });
       }
