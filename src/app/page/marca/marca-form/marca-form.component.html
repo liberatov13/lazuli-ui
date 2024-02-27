@@ -1,0 +1,33 @@
+<div>
+	<p-messages [(value)]="messages"></p-messages>
+
+	<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="formgrid grid">
+		<div class="field col-6">
+			<label for="nome">
+				Nome
+			</label>
+			<div class="p-inputgroup">
+				<input pInputText [ngModel]="marca.nome | uppercase" (ngModelChange)="marca.nome=$event.toUpperCase()"
+						name="nome" id="nome"
+						autocomplete="off"
+						required [minlength]="2" [maxlength]="75"/>
+			</div>
+		</div>
+
+		<div class="field col-2">
+			<label for="status">Status</label>
+			<div class="p-inputgroup">
+				<p-toggleButton [(ngModel)]="marca.status" id="status" name="status"
+						[onIcon]="'fa-solid fa-check'" [offIcon]="'fa-solid fa-times'"
+						onLabel="Ativo" offLabel="Inativo">
+				</p-toggleButton>
+			</div>
+		</div>
+
+		<div class="col-12">
+			<button pButton type="submit" class="btn" [label]="'Salvar'"
+					[icon]="'fa-solid fa-floppy-disk'"
+					[disabled]="form.invalid" ></button>
+		</div>
+	</form>
+</div>
