@@ -21,6 +21,10 @@ export class MenuBarComponent implements OnInit {
             routerLink: 'produto',
           },
           {
+            label: "Marca",
+            routerLink: 'marca',
+          },
+          {
             label: "Receita",
             items: [
               {label: "Cadastro", routerLink: 'receita/cadastrar'},

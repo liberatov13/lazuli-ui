@@ -8,6 +8,7 @@ import { MenubarModule } from "primeng/menubar";
 import { TipoProdutoModule } from "./page/tipo-produto/tipo-produto.module";
 import { HttpClientModule } from "@angular/common/http";
 import { ProdutoModule } from "./page/produto/produto.module";
+import { MarcaModule } from "./page/marca/marca.module";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProdutoModule } from "./page/produto/produto.module";
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
+    MarcaModule,
     MenubarModule,
     ProdutoModule,
     TipoProdutoModule
