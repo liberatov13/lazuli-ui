@@ -21,11 +21,16 @@ export class MenuBarComponent implements OnInit {
             routerLink: 'produto',
           },
           {
+            label: "Marca",
+            routerLink: 'marca',
+          },
+          {
             label: "Receita",
             items: [
               {label: "Cadastro", routerLink: 'receita/cadastrar'},
               {label: "Lista", routerLink: 'receita'},
-            ]
+            ],
+            disabled: true
           },
           {label: "Tipo de Produto", routerLink: 'tipo-produto'},
         ]
@@ -36,7 +41,8 @@ export class MenuBarComponent implements OnInit {
         items: [
           {label: "Registrar", routerLink: 'venda/registrar'},
           {label: "Lista", routerLink: 'venda/listar'},
-        ]
+        ],
+        disabled: true
       },
       {
         label: "Compra",
@@ -44,11 +50,13 @@ export class MenuBarComponent implements OnInit {
         items: [
           {label: "Cadastrar", routerLink: 'compra/cadastrar'},
           {label: "Lista", routerLink: 'compra/listar'},
-        ]
+        ],
+        disabled: true
       },
       {
         label: "Relatório",
-        icon: "fa fa-chart-simple"
+        icon: "fa fa-chart-simple",
+        disabled: true
       }
     ]
   }
