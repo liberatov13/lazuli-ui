@@ -25,6 +25,10 @@ export class MenuBarComponent implements OnInit {
             routerLink: 'marca',
           },
           {
+            label: "Unidade de Medida",
+            routerLink: 'unidade-medida',
+          },
+          {
             label: "Receita",
             items: [
               {label: "Cadastro", routerLink: 'receita/cadastrar'},
