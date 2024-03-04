@@ -9,6 +9,7 @@ import { TipoProdutoModule } from "./page/tipo-produto/tipo-produto.module";
 import { HttpClientModule } from "@angular/common/http";
 import { ProdutoModule } from "./page/produto/produto.module";
 import { MarcaModule } from "./page/marca/marca.module";
+import { UnidadeMedidaModule } from "./page/unidade-medida/unidade-medida.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MarcaModule } from "./page/marca/marca.module";
     MarcaModule,
     MenubarModule,
     ProdutoModule,
-    TipoProdutoModule
+    TipoProdutoModule,
+    UnidadeMedidaModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TipoProdutoPageComponent } from "./page/tipo-produto/tipo-produto-page/tipo-produto-page.component";
 import { ProdutoPageComponent } from "./page/produto/produto-page/produto-page.component";
 import { MarcaPageComponent } from "./page/marca/marca-page/marca-page.component";
+import { UnidadeMedidaPageComponent } from "./page/unidade-medida/unidade-medida-page/unidade-medida-page.component";
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'marca',
     component: MarcaPageComponent,
+  },
+  {
+    path: 'unidade-medida',
+    component: UnidadeMedidaPageComponent,
   },
   {
     path: 'tipo-produto',
