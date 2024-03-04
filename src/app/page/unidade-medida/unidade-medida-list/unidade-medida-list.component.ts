@@ -42,6 +42,8 @@ export class UnidadeMedidaListComponent implements OnInit {
     this.cofirmationService.confirm({
       header: 'Excluir',
       message: 'Deseja realmente excluir esta unidade de medida?',
+      acceptLabel: 'Sim',
+      rejectLabel: 'Não',
       accept: () => {
         this.unidadeMedidaService.delete(idUnidadeMedida).subscribe({
           next: () => {

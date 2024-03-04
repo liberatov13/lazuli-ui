@@ -17,6 +17,10 @@ export class UnidadeMedidaService {
     return this.http.get<UnidadeMedida[]>(this.url);
   }
 
+  save(unidadeMedida: UnidadeMedida): Observable<UnidadeMedida> {
+    return this.http.post<UnidadeMedida>(this.url, unidadeMedida);
+  }
+
   delete(idUnidadeMedida: number): Observable<void> {
     return this.http.delete<void>(`${this.url}/${idUnidadeMedida}`);
   }

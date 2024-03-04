@@ -7,21 +7,28 @@ import { TableModule } from "primeng/table";
 import { MessagesModule } from "primeng/messages";
 import { ConfirmDialogModule } from "primeng/confirmdialog";
 import { TooltipModule } from "primeng/tooltip";
-
+import { UnidadeMedidaFormComponent } from './unidade-medida-form/unidade-medida-form.component';
+import { FormsModule } from "@angular/forms";
+import { InputTextModule } from "primeng/inputtext";
+import { DynamicDialogModule } from "primeng/dynamicdialog";
 
 
 @NgModule({
   declarations: [
     UnidadeMedidaPageComponent,
-    UnidadeMedidaListComponent
+    UnidadeMedidaListComponent,
+    UnidadeMedidaFormComponent
   ],
   imports: [
     CommonModule,
     ButtonModule,
+    DynamicDialogModule,
     MessagesModule,
     TableModule,
     TooltipModule,
     ConfirmDialogModule,
+    FormsModule,
+    InputTextModule,
   ]
 })
 export class UnidadeMedidaModule { }
