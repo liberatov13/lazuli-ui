@@ -4,6 +4,7 @@ import { TipoProdutoPageComponent } from "./page/tipo-produto/tipo-produto-page/
 import { ProdutoPageComponent } from "./page/produto/produto-page/produto-page.component";
 import { MarcaPageComponent } from "./page/marca/marca-page/marca-page.component";
 import { UnidadeMedidaPageComponent } from "./page/unidade-medida/unidade-medida-page/unidade-medida-page.component";
+import { EmbalagemPageComponent } from "./page/embalagem/embalagem-page/embalagem-page.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'unidade-medida',
     component: UnidadeMedidaPageComponent,
+  },
+  {
+    path: 'embalagem',
+    component: EmbalagemPageComponent,
   },
   {
     path: 'tipo-produto',
