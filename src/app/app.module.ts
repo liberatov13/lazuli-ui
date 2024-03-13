@@ -10,6 +10,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProdutoModule } from "./page/produto/produto.module";
 import { MarcaModule } from "./page/marca/marca.module";
 import { UnidadeMedidaModule } from "./page/unidade-medida/unidade-medida.module";
+import { EmbalagemModule } from "./page/embalagem/embalagem.module";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UnidadeMedidaModule } from "./page/unidade-medida/unidade-medida.module
   imports: [
     AppRoutingModule,
     BrowserModule,
+    EmbalagemModule,
     HttpClientModule,
     MarcaModule,
     MenubarModule,

@@ -24,4 +24,8 @@ export class MarcaService {
   findById(idMarca: number): Observable<Marca> {
     return this.http.get(`${this.url}/${idMarca}`);
   }
+
+  autocomplete(query: string): Observable<Marca[]> {
+    return this.http.get<Marca[]>(`${this.url}/autocomplete?term=${query}`);
+  }
 }
