@@ -1,0 +1,86 @@
+<div>
+	<p-messages [(value)]="messages"></p-messages>
+	<p-blockUI [blocked]="isLoading">
+		<p-progressSpinner></p-progressSpinner>
+	</p-blockUI>
+
+	<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="formgrid grid">
+
+		<div class="field col-6">
+			<label for="codigoEan">
+				Código EAN
+			</label>
+			<div class="p-inputgroup">
+				<input pInputText [(ngModel)]="embalagem.codigoEan"
+					   name="codigoEan" id="codigoEan" autocomplete="off" [type]="'number'"
+					   [minLength]="20" [maxLength]="20"/>
+			</div>
+		</div>
+
+		<div class="field col-6">
+			<label for="produto">
+				Produto
+			</label>
+			<div *ngIf="!embalagem.produto" class="p-inputgroup">
+				<p-autoComplete [ngModel]="embalagem.produto" id="produto" name="produto"
+						[suggestions]="produtosSuggestion" (completeMethod)="autocompleteProduto($event)" (onSelect)="selectProduto($event.value)"
+						[required]="true" [style]="{width: '100%'}" [disabled]="isLoading" [appendTo]="'body'">
+					<ng-template let-produto pTemplate="item">
+						<div class="flex align-items-center gap-2">
+							<div>{{ produto.idProduto }} - {{ produto.descricaoBasica }}</div>
+						</div>
+					</ng-template>
+				</p-autoComplete>
+			</div>
+			<div *ngIf="embalagem.produto" class="p-inputgroup">
+				<input type="text" pInputText [ngModel]="embalagem.produto.descricaoBasica" name="produtoSelected"
+					   id="produtoSelected" [disabled]="true">
+				<button pButton [icon]="'fa-solid fa-times'" class="p-button p-button-danger" (click)="embalagem.produto = undefined"></button>
+			</div>
+		</div>
+
+		<div class="field col-6">
+			<label for="marca">
+				Marca
+			</label>
+			<div *ngIf="!embalagem.marca" class="p-inputgroup">
+				<p-autoComplete [ngModel]="embalagem.marca" id="marca" name="marca"
+						[suggestions]="marcasSuggestion" (completeMethod)="autocompleteMarca($event)" (onSelect)="selectMarca($event.value)"
+						[optionLabel]="'nome'" [required]="true" [style]="{width: '100%'}" [disabled]="isLoading" [appendTo]="'body'">
+				</p-autoComplete>
+			</div>
+			<div *ngIf="embalagem.marca" class="p-inputgroup">
+				<input type="text" pInputText [ngModel]="embalagem.marca.nome" name="marcaSelected"
+					   id="marcaSelected" [disabled]="true">
+				<button pButton [icon]="'fa-solid fa-times'" class="p-button p-button-danger" (click)="embalagem.marca = undefined"></button>
+			</div>
+		</div>
+
+		<div class="field col-3">
+			<label for="quantidade">
+				Quantidade
+			</label>
+			<div class="p-inputgroup">
+				<input type="number" pInputText [(ngModel)]="embalagem.quantidade" name="quantidade" id="quantidade"
+						[required]="true">
+			</div>
+		</div>
+
+		<div class="field col-3">
+			<label for="unidadeMedida">
+				Unidade de Medida
+			</label>
+			<p-dropdown [(ngModel)]="embalagem.unidadeMedida" id="unidadeMedida" name="unidadeMedida"
+						class="ng-dirty" [disabled]="isLoading" [appendTo]="'body'"
+						[placeholder]="'Selecione a unidade de medida'" [showClear]="true" [style]="{'width':'100%'}"
+						[options]="unidadesMedida" [optionLabel]="'nome'" [required]="true" [filter]="true" [filterBy]="'nome'">
+			</p-dropdown>
+		</div>
+
+		<div class="col-12">
+			<button pButton type="submit" class="p-button p-button-success" [label]="'Salvar'"
+					[icon]="'fa-solid fa-floppy-disk'"
+					[disabled]="form.invalid" ></button>
+		</div>
+	</form>
+</div>

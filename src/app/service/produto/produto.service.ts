@@ -32,4 +32,8 @@ export class ProdutoService {
   activate(id: number): Observable<any> {
     return this.http.put(`${this.url}/${id}/ativar`, null);
   }
+
+  autocomplete(query: string): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${this.url}/autocomplete?term=${query}`);
+  }
 }

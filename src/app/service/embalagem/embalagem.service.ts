@@ -23,4 +23,15 @@ export class EmbalagemService {
       })
     );
   }
+
+  save(embalagem: Embalagem): Observable<Embalagem> {
+    const body = {
+      produto: embalagem.produto?.idProduto,
+      marca: embalagem.marca?.idMarca,
+      unidadeMedida: embalagem.unidadeMedida?.idUnidadeMedida,
+      quantidade: embalagem.quantidade,
+      codigoEan: embalagem.codigoEan,
+    }
+    return this.http.post<Embalagem>(this.url, body);
+  }
 }
