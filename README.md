@@ -1,27 +1,80 @@
-# LazuliUi
+# :cupcake: Lazuli :cupcake:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+## Sobre o projeto :scroll:
 
-## Development server
+Lazuli é um sistema ERP desenvolvido para uma confeitaria, com o objetivo de auxiliar no controle de entrada e saída de produtos, lucros e despepesas, precificação de produtos, entre outras informações.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tabela de conteúdo
+- [Sobre o projeto](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#sobre-o-projeto-scroll)
+  - [Funcionalidades do sistema](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#funcionalidades)
+  - [Tecnoogias utilizadas](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#tecnologias-utilizadas-hammer_and_wrench)
+- [Executando o projeto](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#executando-projeto-)
+  - [Máquina local](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#m%C3%A1quina-local-desktop_computer)
+  - [Docker]()
+- [Créditos](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#autor-pencil2)
 
-## Code scaffolding
+#### Funcionalidades:
+- [X] Cadastro de produtos
+- [ ] Cadastro de receitas
+- [ ] Controle de vendas e compras
+- [ ] Controle de estoque
+- [ ] Relatórios
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologias utilizadas :hammer_and_wrench:
+- Angular (v16)
+- PrimeNG (v16)
+- PrimeFlex (v3)
+- FontAwesome (v6)
 
-## Build
+## Executando projeto 🧑‍💻
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Esse aplicação deve ser utilizando em conjunto com o projeto [Lazuli API](https://github.com/liberatov13/lazuli-api)
 
-## Running unit tests
+### Máquina local :desktop_computer:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Pré-requisitos
+- NodeJS (v20)
+- NPM (v10)
+- [API](https://github.com/liberatov13/fintech-back-end)
 
-## Running end-to-end tests
+Baixe e execute o [projeto back-end](https://github.com/liberatov13/fintech-back-end) do GitHub.
+As instruções para executar a API estão disponíveis no README do projeto.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### Instalação e execução do front-end
 
-## Further help
+```bash
+# Clone o projeto front-end
+git clone https://github.com/liberatov13/lazuli-ui.git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Acesse o diretório do projeto
+cd lazuli-ui
+
+# Instale as dependencias
+npm install
+
+# Execute o projeto com npm
+npm start
+```
+
+#### Docker 🐳
+
+##### Pré-requisitos
+- Docker
+- Docker compose
+
+```bash
+# Clone o projeto front-end
+git clone https://github.com/liberatov13/lazuli-ui.git
+
+# Acesse o diretório do projeto
+cd lazuli-ui
+
+# Execute a aplicação com docker compose
+docker compose up -d
+```
+
+A aplicação ficará disponível através da URL http://localhost:4200 ou http://127.0.0.1:4200
+
+
+## Autor :pencil2:
+[Elvis Liberato de Barros](https://github.com/liberatov13)
