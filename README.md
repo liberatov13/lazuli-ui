@@ -5,13 +5,13 @@
 Lazuli é um sistema ERP desenvolvido para uma confeitaria, com o objetivo de auxiliar no controle de entrada e saída de produtos, lucros e despepesas, precificação de produtos, entre outras informações.
 
 ## Tabela de conteúdo
-- [Sobre o projeto](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#sobre-o-projeto-scroll)
-  - [Funcionalidades do sistema](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#funcionalidades)
-  - [Tecnoogias utilizadas](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#tecnologias-utilizadas-hammer_and_wrench)
-- [Executando o projeto](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#executando-projeto-)
-  - [Máquina local](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#m%C3%A1quina-local-desktop_computer)
-  - [Docker]()
-- [Créditos](https://github.com/liberatov13/lazuli-ui/edit/master/README.md#autor-pencil2)
+- [Sobre o projeto](#sobre-o-projeto-scroll)
+  - [Funcionalidades do sistema](#funcionalidades)
+  - [Tecnoogias utilizadas](#tecnologias-utilizadas-hammer_and_wrench)
+- [Executando o projeto](#executando-projeto-)
+  - [Máquina local](#m%C3%A1quina-local-desktop_computer)
+  - [Docker](#docker-)
+- [Créditos](#autor-pencil2)
 
 #### Funcionalidades:
 - [X] Cadastro de produtos
