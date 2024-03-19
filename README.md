@@ -56,7 +56,7 @@ npm install
 npm start
 ```
 
-#### Docker 🐳
+### Docker 🐳
 
 ##### Pré-requisitos
 - Docker
@@ -76,5 +76,5 @@ docker compose up -d
 A aplicação ficará disponível através da URL http://localhost:4200 ou http://127.0.0.1:4200
 
 
-## Autor :pencil2:
-[Elvis Liberato de Barros](https://github.com/liberatov13)
+## Créditos :pencil2:
+[Elvis Liberato de Barros](https://github.com/liberatov13) (Desenvolvedor)
