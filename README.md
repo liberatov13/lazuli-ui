@@ -47,9 +47,9 @@ Esse aplicação deve ser utilizando em conjunto com o projeto [Lazuli API](http
 #### Pré-requisitos
 - NodeJS (v20)
 - NPM (v10)
-- [API](https://github.com/liberatov13/fintech-back-end)
+- [API](https://github.com/liberatov13/lazuli-api)
 
-Baixe e execute o [projeto back-end](https://github.com/liberatov13/fintech-back-end) do GitHub.
+Baixe e execute o [projeto back-end](https://github.com/liberatov13/lazuli-api) do GitHub.
 As instruções para executar a API estão disponíveis no README do projeto.
 
 ```bash
