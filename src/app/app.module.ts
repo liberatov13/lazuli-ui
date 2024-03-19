@@ -15,7 +15,7 @@ import { EmbalagemModule } from "./page/embalagem/embalagem.module";
 @NgModule({
   declarations: [
     AppComponent,
-    MenuBarComponent
+    MenuBarComponent,
   ],
   imports: [
     AppRoutingModule,

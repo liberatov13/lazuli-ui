@@ -5,8 +5,13 @@ import { ProdutoPageComponent } from "./page/produto/produto-page/produto-page.c
 import { MarcaPageComponent } from "./page/marca/marca-page/marca-page.component";
 import { UnidadeMedidaPageComponent } from "./page/unidade-medida/unidade-medida-page/unidade-medida-page.component";
 import { EmbalagemPageComponent } from "./page/embalagem/embalagem-page/embalagem-page.component";
+import { HomeComponent } from "./page/home/home.component";
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: 'produto',
     component: ProdutoPageComponent,
