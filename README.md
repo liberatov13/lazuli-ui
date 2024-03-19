@@ -13,7 +13,7 @@ Lazuli é um sistema ERP desenvolvido para uma confeitaria, com o objetivo de au
   - [Docker](#docker-)
 - [Créditos](#autor-pencil2)
 
-#### Funcionalidades:
+#### Funcionalidades
 - [X] Cadastro de produtos
 - [ ] Cadastro de receitas
 - [ ] Controle de vendas e compras
