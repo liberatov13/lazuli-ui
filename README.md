@@ -40,8 +40,6 @@ Esse aplicação deve ser utilizando em conjunto com o projeto [Lazuli API](http
 Baixe e execute o [projeto back-end](https://github.com/liberatov13/fintech-back-end) do GitHub.
 As instruções para executar a API estão disponíveis no README do projeto.
 
-#### Instalação e execução do front-end
-
 ```bash
 # Clone o projeto front-end
 git clone https://github.com/liberatov13/lazuli-ui.git
@@ -58,7 +56,7 @@ npm start
 
 ### Docker 🐳
 
-##### Pré-requisitos
+#### Pré-requisitos
 - Docker
 - Docker compose
 
