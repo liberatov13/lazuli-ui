@@ -11,10 +11,12 @@ import { ProdutoModule } from "./page/produto/produto.module";
 import { MarcaModule } from "./page/marca/marca.module";
 import { UnidadeMedidaModule } from "./page/unidade-medida/unidade-medida.module";
 import { EmbalagemModule } from "./page/embalagem/embalagem.module";
+import { HomeComponent } from "./page/home/home.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     MenuBarComponent,
   ],
   imports: [
